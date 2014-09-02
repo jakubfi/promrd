@@ -1,0 +1,7 @@
+*.lst
+*.hex
+*.o
+*.out
+*.map
+*.bin
+promrd
