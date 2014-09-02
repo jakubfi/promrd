@@ -34,7 +34,7 @@ Receiver script waits for "----" on the serial line and then collects next 256 b
 Commandline syntax is:
 
 ```
-      promrd.py prefix copies
+      promrd.py <prefix> <copies>
 ```
 
 where:
