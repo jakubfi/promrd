@@ -1,7 +1,3 @@
-
-About PROMRD
-=============================================
-
 Promrd is a set of tools built for getting contents of Amepol's RTC PROM memory out. It consists of three parts:
 
 * simple PROM reader based on ATtiny2313
@@ -34,11 +30,11 @@ Receiver script waits for "----" on the serial line and then collects next 256 b
 Commandline syntax is:
 
 ```
-      promrd.py <prefix> <copies>
+ promrd.py <prefix> <copies>
 ```
 
 where:
 
-* prefix - prefix for output files. Files are suffixed with sequential copy numbers
-* copies - number of PROM reads
+* *prefix* - prefix for output files. Files are suffixed with sequential copy numbers
+* *copies* - number of PROM reads
 
