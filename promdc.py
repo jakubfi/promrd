@@ -38,17 +38,26 @@ fb.close()
 fo = open(sys.argv[3], "wb")
 shift = 12
 d = 0
+deof = 0
 for i in range(0, 256):
     # make byte value from 4-bit prom A and B contents
     v = (a[i] << 4) | b[i]
 
+    print i, ": ", hex(v), bin(v)
+
+    if deof == 1:
+        continue
+
     # skip invalid bytes
     if v & 0b01000000 == 0:
+        print "invalid"
         continue;
 
     # EOF
     if shift == 12 and v & 0b01010000 == 0b01010000:
-        break;
+        print "EOF"
+        deof = 1
+        continue;
 
     # collect 16-bit machine word
     d |= (v & 0b111111) << shift
